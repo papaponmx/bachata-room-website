@@ -12,7 +12,7 @@ const ClasesSection: React.FC<ClasesSectionProps> = ({
     imageUrl,
 }) => {
     return (
-        <section className="flex flex-col items-center justify-center min-h-screen min-w-screen bg-gradient-to-b from-zinc-200 to-white">
+        <section id='clases' className="flex flex-col items-center justify-center min-h-screen min-w-screen bg-gradient-to-b from-zinc-200 to-white">
             <h2 className="text-4xl font-semibold mb-4">{title}</h2>
             <div className="max-w-3xl text-center mb-8">
                 <p className="text-lg opacity-70">{description}</p>
