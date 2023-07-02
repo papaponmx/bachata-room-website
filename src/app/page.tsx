@@ -1,6 +1,9 @@
 import ClasesSection from '@/components/clases-section';
 import Image from 'next/image';
 
+import ClasesCoreograficas from './clases.mdx';
+import ClasesSabados from './clases-sabados.mdx';
+
 export default function Home() {
   return (
     <><main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -66,22 +69,6 @@ export default function Home() {
         </a>
 
         <a
-          href="#precios"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Precios{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explora nuestras opciones de precios y paquetes de clases.
-          </p>
-        </a>
-
-        <a
           href="#contacto"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           rel="noopener noreferrer"
@@ -97,9 +84,21 @@ export default function Home() {
           </p>
         </a>
       </div>
-    </main><ClasesSection
+    </main>
+      <ClasesSection
+        id="clases"
         title="Clases de Bachata"
         description="Aprende a bailar bachata con nuestros instructores profesionales. Ofrecemos clases para todos los niveles, desde principiantes hasta avanzados. Descubre los pasos y movimientos más populares de la bachata y mejora tu técnica y estilo."
-        /></>
+      >
+        <ClasesSabados />
+      </ClasesSection>
+      <ClasesSection
+        id="equipo"
+        title="Clases de Bachata"
+        description="Aprende a bailar bachata con nuestros instructores profesionales. Ofrecemos clases para todos los niveles, desde principiantes hasta avanzados. Descubre los pasos y movimientos más populares de la bachata y mejora tu técnica y estilo."
+      >
+        <ClasesCoreograficas />
+      </ClasesSection>
+    </>
   );
 }
